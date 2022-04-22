@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectInfo>
+    <Name>R1_ssis</Name>
+    <LastWriteTime>2022-04-22T10:50:29.1205664Z</LastWriteTime>
+    <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+  </ProjectInfo>
+  <LastBuildInfos>
+    <ProjectBuildItemInfo>
+      <Name>16_Aggregate.dtsx</Name>
+      <LastWriteTime>2022-04-11T00:08:12.7522152Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>10_Changing the code page.dtsx</Name>
+      <LastWriteTime>2022-04-20T13:13:36.5398431Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>01_loading employee txt to sql.dtsx</Name>
+      <LastWriteTime>2022-04-20T10:52:27.9960984Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>02_loading employee txt with text qualifiers.dtsx</Name>
+      <LastWriteTime>2022-04-20T17:10:27.5094396Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>03_loading sales cvs to sql.dtsx</Name>
+      <LastWriteTime>2022-04-11T11:05:23.5201384Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>04_loading sales file to table or view vs fast.dtsx</Name>
+      <LastWriteTime>2022-04-11T11:05:23.5141442Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>05_loading employee txt with DC.dtsx</Name>
+      <LastWriteTime>2022-04-22T03:49:33.0148731Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>06_loading the sales with DC.dtsx</Name>
+      <LastWriteTime>2022-04-20T11:11:24.0141383Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>07_loaded data with added column.dtsx</Name>
+      <LastWriteTime>2022-04-20T13:43:46.9837123Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>08_loading data with data conversiton witout derived column.dtsx</Name>
+      <LastWriteTime>2022-04-11T11:05:23.4871422Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>09_split the data using conditional split.dtsx</Name>
+      <LastWriteTime>2022-04-11T11:05:23.4791623Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>24_Loading multiple flat file.dtsx</Name>
+      <LastWriteTime>2022-04-12T00:38:39.6906026Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>22_Look up transformation.dtsx</Name>
+      <LastWriteTime>2022-04-11T19:32:40.574232Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>25_picking the latest file using timestamp.dtsx</Name>
+      <LastWriteTime>2022-04-13T01:07:23.1539406Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>11_loading sales data with BDD.dtsx</Name>
+      <LastWriteTime>2022-04-20T14:19:26.6282505Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>12_Loading the data with multicast.dtsx</Name>
+      <LastWriteTime>2022-04-20T15:52:33.0652502Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>13_loading excel to sql.dtsx</Name>
+      <LastWriteTime>2022-04-20T18:53:01.4055935Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>14_OLEDB to CSV.dtsx</Name>
+      <LastWriteTime>2022-04-20T20:31:39.2799223Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>17_Sort Transformation.dtsx</Name>
+      <LastWriteTime>2022-04-22T07:22:21.5905419Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>18_Union All.dtsx</Name>
+      <LastWriteTime>2022-04-22T06:11:21.4619432Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>19_merge transformation.dtsx</Name>
+      <LastWriteTime>2022-04-22T08:50:52.9725979Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>20_merge join transformation.dtsx</Name>
+      <LastWriteTime>2022-04-22T12:18:11.760496Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>19.1_merge without sort transformation.dtsx</Name>
+      <LastWriteTime>2022-04-22T10:50:29.0806022Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+  </LastBuildInfos>
+</BuildLog>

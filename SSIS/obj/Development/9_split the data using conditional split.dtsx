@@ -1,0 +1,1591 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/6/2022 11:47:38 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KCVER93"
+  DTS:CreatorName="DESKTOP-KCVER93\KITS"
+  DTS:DTSID="{2CD19285-6528-408E-AAB3-6AB51A1FA83A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="38"
+  DTS:VersionGUID="{5AA9A0C7-E533-47B4-916F-020688EBD400}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{270B6633-6F11-4210-B8C3-3B917DDA9E7E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\ssis\sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="33"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{A4E04FD6-19D6-4555-8546-CC63AF01F70F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="32"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{EEB0E9D7-2592-4BF9-A32E-E08254285895}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ItemType"
+              DTS:DTSID="{93680A5F-F1DF-41F4-98D4-6CF80A871B74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="7"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales Channel"
+              DTS:DTSID="{1EDCE110-1827-4DA1-9727-5DF85BFCEBA5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Priority"
+              DTS:DTSID="{0366F86B-E31C-4F1C-9F00-757D998B282C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order Date"
+              DTS:DTSID="{F7511DBF-EA28-429B-8BB3-354AC89CD8F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{42CE16D0-1467-4654-99AD-B7AD838C52DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ship Date"
+              DTS:DTSID="{0137D626-2651-40CC-9C74-98531201366B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Units Sold"
+              DTS:DTSID="{CC48E70E-2821-4EFA-AEFB-2491C8AAD79F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Price"
+              DTS:DTSID="{741C2194-BCCE-4CFE-BC07-9812576CE14F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Revenue"
+              DTS:DTSID="{684EE921-29B3-4E36-84E3-3E6CBC53A1A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unit Cost"
+              DTS:DTSID="{8B895CDD-157E-40E5-A940-47631BEC7454}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Cost"
+              DTS:DTSID="{739A8B93-82F5-43C6-B0BD-1C85342EC30D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="4"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total Profit"
+              DTS:DTSID="{DBCBFB03-83A0-42C4-B10D-EF5490709553}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{015336C8-521E-425F-8430-29283D88AF23}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\ssis\sales.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Central America and the Caribbean"
+              DTS:DTSID="{6CAF6E74-ABE1-4927-8131-86EC2809582D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Saint Kitts and Nevis "
+              DTS:DTSID="{F1990E57-24A9-4461-86D8-CA8DD57D1D3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cosmetics"
+              DTS:DTSID="{C2F5DF46-D931-46D8-84FD-08560682B373}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Offline"
+              DTS:DTSID="{5B4111F7-64D7-4F76-8BE2-B74F0F079A6B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="M"
+              DTS:DTSID="{BAA09C9B-37EF-408B-8D84-B4FDAEF3F82B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="4 22 2018"
+              DTS:DTSID="{FA9CB3CE-CD50-4EB6-98A3-6B40C2E8B687}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="607061421"
+              DTS:DTSID="{4AAA50A0-DBB7-4EBC-9CD9-26DADB29F601}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="5 18 2018"
+              DTS:DTSID="{07D68837-E3AC-45D6-8FC3-33636BB095CB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="1820"
+              DTS:DTSID="{852A3D91-F778-4802-8A27-16641A83BA10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="437 20"
+              DTS:DTSID="{1005CF8F-9A2E-4750-91D1-63EABC94D6D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="263 33"
+              DTS:DTSID="{98432A23-DDFF-4C4C-8C38-E6B0BA1438DE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="795704 00"
+              DTS:DTSID="{C4AEEDFF-35C5-4C7E-9A82-D8BCD468C7AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="479260 60"
+              DTS:DTSID="{F56EB7AA-3E5E-4D12-A4CE-8EE6C7A16518}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="316443 40"
+              DTS:DTSID="{E817C542-0F1A-4739-984C-76ED04B2B688}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="2021-11-08 07 20 19 407000000"
+              DTS:DTSID="{A6AC0B5A-CF26-434C-9B07-1B3AAA5A2423}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D208E78F-0116-4F0A-ACB9-9ADCEC66130E}"
+      DTS:ObjectName="LocalHost.R1_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\split the sales data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A15C4225-9C65-4736-81BC-15BD9B4C5814}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="split the sales data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\split the sales data\Asia data load"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Asia data load"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Asia data load]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\split the sales data\Asia data load.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="33"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Sales Channel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Sales Channel"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Order Priority]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Order Priority"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order Priority]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Priority]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Order Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Order Date"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order Date]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Order ID]"
+                      cachedDataType="i4"
+                      cachedName="Order ID"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Ship Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Ship Date"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Ship Date]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Units Sold]"
+                      cachedDataType="i2"
+                      cachedName="Units Sold"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Units Sold]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Units Sold]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Unit Price]"
+                      cachedDataType="r4"
+                      cachedName="Unit Price"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Price]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Total Revenue]"
+                      cachedDataType="r4"
+                      cachedName="Total Revenue"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Total Revenue]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Revenue]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Unit Cost]"
+                      cachedDataType="r4"
+                      cachedName="Unit Cost"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Unit Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[Total Cost]"
+                      cachedDataType="r4"
+                      cachedName="Total Cost"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Total Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Cost]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].Columns[ItemType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="ItemType"
+                      externalMetadataColumnId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[ItemType]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[ItemType]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="33"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Sales Channel" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Order Priority" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order Date]"
+                      dataType="dbTimeStamp"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      dataType="i4"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Ship Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Ship Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Units Sold]"
+                      dataType="i2"
+                      name="Units Sold" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      dataType="r4"
+                      name="Unit Price" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Total Revenue]"
+                      dataType="r4"
+                      name="Total Revenue" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Unit Cost]"
+                      dataType="r4"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Total Cost]"
+                      dataType="r4"
+                      name="Total Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[ItemType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ItemType" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input].ExternalColumns[Total Profit]"
+                      dataType="r4"
+                      name="Total Profit" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\split the sales data\Asia data load.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\split the sales data\Asia data load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Asia data load.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\split the sales data\Asia data load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Asia data load.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\split the sales data\Asia_Europe"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Asia_Europe"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Asia_Europe]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\split the sales data\Asia_Europe.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="33"
+                      cachedName="Region"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="32"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Sales Channel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="7"
+                      cachedName="Sales Channel"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Order Priority]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Order Priority"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order Priority]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Priority]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Order Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Order Date"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order Date]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Order ID]"
+                      cachedDataType="i4"
+                      cachedName="Order ID"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Ship Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Ship Date"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Ship Date]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Units Sold]"
+                      cachedDataType="i2"
+                      cachedName="Units Sold"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Units Sold]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Units Sold]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Unit Price]"
+                      cachedDataType="r4"
+                      cachedName="Unit Price"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Price]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Total Revenue]"
+                      cachedDataType="r4"
+                      cachedName="Total Revenue"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Revenue]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Revenue]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Unit Cost]"
+                      cachedDataType="r4"
+                      cachedName="Unit Cost"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Unit Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Total Cost]"
+                      cachedDataType="r4"
+                      cachedName="Total Cost"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Cost]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[ItemType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="ItemType"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[ItemType]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[ItemType]" />
+                    <inputColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].Columns[Total Profit]"
+                      cachedDataType="r4"
+                      cachedName="Total Profit"
+                      externalMetadataColumnId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Profit]"
+                      lineageId="Package\split the sales data\177:invalid" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="33"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Sales Channel" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Order Priority" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order Date]"
+                      dataType="dbTimeStamp"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      dataType="i4"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Ship Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Ship Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Units Sold]"
+                      dataType="i2"
+                      name="Units Sold" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Unit Price]"
+                      dataType="r4"
+                      name="Unit Price" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Revenue]"
+                      dataType="r4"
+                      name="Total Revenue" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Unit Cost]"
+                      dataType="r4"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Cost]"
+                      dataType="r4"
+                      name="Total Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[ItemType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ItemType" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input].ExternalColumns[Total Profit]"
+                      dataType="r4"
+                      name="Total Profit" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\split the sales data\Asia_Europe.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\split the sales data\Asia_Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Asia_Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\split the sales data\Asia_Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Asia_Europe.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\split the sales data\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input].Columns[Region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="33"
+                      cachedName="Region"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\split the sales data\Conditional Split.Outputs[asia]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="asia"
+                  synchronousInputId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]} == "Asia"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Region == "Asia"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\split the sales data\Conditional Split.Outputs[asia_eur]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="asia_eur"
+                  synchronousInputId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]} == "Asia" || #{Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]} == "Europe"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">Region == "Asia" || Region == "Europe"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\split the sales data\Conditional Split.Outputs[Asia data]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Asia data"
+                  synchronousInputId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\split the sales data\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\split the sales data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\split the sales data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\split the sales data\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\split the sales data\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      length="33"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="32"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[ItemType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ItemType]"
+                      length="15"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[ItemType]"
+                      name="ItemType"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales Channel]"
+                      length="7"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel]"
+                      name="Sales Channel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Priority]"
+                      length="1"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Priority]"
+                      name="Order Priority"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order Date]"
+                      name="Order Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      name="Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      length="10"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Ship Date]"
+                      name="Ship Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Units Sold]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Units Sold]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Units Sold]"
+                      name="Units Sold"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Price]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Price]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Price]"
+                      name="Unit Price"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Revenue]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Revenue]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Revenue]"
+                      name="Total Revenue"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Unit Cost]"
+                      name="Unit Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Cost]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Cost]"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].Columns[Total Cost]"
+                      name="Total Cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="33"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="32"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ItemType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      name="ItemType" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales Channel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="7"
+                      name="Sales Channel" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Priority]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Order Priority" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order Date]"
+                      dataType="dbTimeStamp"
+                      name="Order Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      dataType="i4"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ship Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Ship Date" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Units Sold]"
+                      dataType="i2"
+                      name="Units Sold" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Price]"
+                      dataType="r4"
+                      name="Unit Price" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Revenue]"
+                      dataType="r4"
+                      name="Total Revenue" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
+                      dataType="r4"
+                      name="Unit Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Cost]"
+                      dataType="r4"
+                      name="Total Cost" />
+                    <externalMetadataColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Total Profit]"
+                      dataType="r4"
+                      name="Total Profit" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\split the sales data.Paths[asia]"
+              endId="Package\split the sales data\Asia data load.Inputs[OLE DB Destination Input]"
+              name="asia"
+              startId="Package\split the sales data\Conditional Split.Outputs[Asia data]" />
+            <path
+              refId="Package\split the sales data.Paths[asia_eur]"
+              endId="Package\split the sales data\Asia_Europe.Inputs[OLE DB Destination Input]"
+              name="asia_eur"
+              startId="Package\split the sales data\Conditional Split.Outputs[asia_eur]" />
+            <path
+              refId="Package\split the sales data.Paths[Flat File Source Output]"
+              endId="Package\split the sales data\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\split the sales data\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="170,42"
+          Id="Package\split the sales data"
+          TopLeft="231.5,148.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\split the sales data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="159,42"
+          Id="Package\split the sales data\Conditional Split"
+          TopLeft="365.5,164.5" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\split the sales data\Flat File Source"
+          TopLeft="5.5,5.5" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\split the sales data\Asia_Europe"
+          TopLeft="572,320" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\split the sales data\Asia data load"
+          TopLeft="44.5,315.5" />
+        <EdgeLayout
+          Id="Package\split the sales data.Paths[asia]"
+          TopLeft="419.833333333333,206.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-300.833333333333,109"
+              Start="0,0"
+              End="-300.833333333333,101.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.2515566625156" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.2515566625156"
+                    Point2="0,44.2515566625156"
+                    Point3="-4,44.2515566625156" />
+                  <mssgle:LineSegment
+                    End="-296.833333333333,44.2515566625156" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-296.833333333333,44.2515566625156"
+                    Point2="-300.833333333333,44.2515566625156"
+                    Point3="-300.833333333333,48.2515566625156" />
+                  <mssgle:LineSegment
+                    End="-300.833333333333,101.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-179.853678385416,49.2515566625156,58.8740234375,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\split the sales data.Paths[Flat File Source Output]"
+          TopLeft="83.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="361.5,117"
+              Start="0,0"
+              End="361.5,109.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.5"
+                    Point2="0,58.5"
+                    Point3="4,58.5" />
+                  <mssgle:LineSegment
+                    End="357.5,58.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="357.5,58.5"
+                    Point2="361.5,58.5"
+                    Point3="361.5,62.5" />
+                  <mssgle:LineSegment
+                    End="361.5,109.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\split the sales data.Paths[asia_eur]"
+          TopLeft="470.166666666667,206.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172.833333333333,113.5"
+              Start="0,0"
+              End="172.833333333333,106">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.0784557907846" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.0784557907846"
+                    Point2="0,46.0784557907846"
+                    Point3="4,46.0784557907846" />
+                  <mssgle:LineSegment
+                    End="168.833333333333,46.0784557907846" />
+                  <mssgle:CubicBezierSegment
+                    Point1="168.833333333333,46.0784557907846"
+                    Point2="172.833333333333,46.0784557907846"
+                    Point3="172.833333333333,50.0784557907846" />
+                  <mssgle:LineSegment
+                    End="172.833333333333,106" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="58.3643229166667,51.0784557907846,56.1046875,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\split the sales data\Asia_Europe">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\split the sales data\Asia data load">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

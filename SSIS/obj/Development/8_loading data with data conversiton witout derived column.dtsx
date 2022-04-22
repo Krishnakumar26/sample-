@@ -1,0 +1,825 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/5/2022 6:27:30 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KCVER93"
+  DTS:CreatorName="DESKTOP-KCVER93\KITS"
+  DTS:DTSID="{1D5CDE67-86FD-4E95-9CAE-EFD3E329E194}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6264F627-E60B-4389-B30A-40E2A76A4788}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{984D6FD4-F3A9-4452-AF57-BFC45A99BFA1}"
+      DTS:ObjectName="LocalHost.R1_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=R1_SSIS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[src_emp_conn]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C427EBB6-0B60-4127-851E-A0AD8CBC2B79}"
+      DTS:ObjectName="src_emp_conn">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\ssis\Employee.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="employee_id"
+              DTS:DTSID="{E539E918-34C1-4AEF-A9B0-9853FAC70200}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="first_name"
+              DTS:DTSID="{F5CDF2E3-DBA6-463B-B4E6-AF4C2D3248F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="last_name"
+              DTS:DTSID="{1EEA13C2-E69D-45AC-8A5E-F0CD237795AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="email"
+              DTS:DTSID="{E5D511D9-81F2-45D9-8B29-9D9723D06F5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="phone_number"
+              DTS:DTSID="{3E5B0B62-A10B-4F22-A5CF-23E0037E204B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="hire_date"
+              DTS:DTSID="{2E08A634-E659-43E5-B188-69770B48413E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="job_id"
+              DTS:DTSID="{E238150F-D446-48C2-B9EA-B713B9CBB829}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="salary"
+              DTS:DTSID="{B12660DE-D1F9-4DCE-87F1-E8D345259455}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="manager_id"
+              DTS:DTSID="{36D36759-A66A-47BF-8E9B-B198349E1ED3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="department_id"
+              DTS:DTSID="{69B08CB7-C71B-4B8C-8665-E8A601ECAC25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="exp"
+              DTS:DTSID="{831A8D4B-5D8F-4D73-9089-A38DAB2FD6D4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\change the data type without derived column"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1169F945-D713-4A40-B886-EF87EF874A1E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="change the data type without derived column"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\change the data type without derived column\emp_without_derived_column"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="emp_without_derived_column"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[emp_without_derived_column]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\change the data type without derived column\emp_without_derived_column.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.R1_SSIS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[employee_id]"
+                      cachedDataType="i4"
+                      cachedName="employee_id"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[first_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="first_name"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[last_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="last_name"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[email]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="email"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[email]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[phone_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="phone_number"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[phone_number]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[hire_date]"
+                      cachedDataType="i4"
+                      cachedName="hire_date"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[hire_date]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[job_id]"
+                      cachedDataType="i4"
+                      cachedName="job_id"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[job_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[salary]"
+                      cachedDataType="i4"
+                      cachedName="salary"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[salary]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[salary]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[manager_id]"
+                      cachedDataType="i4"
+                      cachedName="manager_id"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[manager_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[department_id]"
+                      cachedDataType="i4"
+                      cachedName="department_id"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[department_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]" />
+                    <inputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].Columns[exp]"
+                      cachedDataType="i4"
+                      cachedName="exp"
+                      externalMetadataColumnId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[exp]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[exp]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[employee_id]"
+                      dataType="i4"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone_number" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[hire_date]"
+                      dataType="i4"
+                      name="hire_date" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[job_id]"
+                      dataType="i4"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[salary]"
+                      dataType="i4"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[manager_id]"
+                      dataType="i4"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[department_id]"
+                      dataType="i4"
+                      name="department_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input].ExternalColumns[exp]"
+                      dataType="i4"
+                      name="exp" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\change the data type without derived column\emp_without_derived_column.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\change the data type without derived column\emp_without_derived_column.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\change the data type without derived column\emp_without_derived_column.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\change the data type without derived column\emp_without_derived_column.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\change the data type without derived column\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="16393"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\change the data type without derived column\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[src_emp_conn]"
+                  connectionManagerRefId="Package.ConnectionManagers[src_emp_conn]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[employee_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[employee_id]"
+                      name="employee_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      length="50"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[first_name]"
+                      name="first_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      length="50"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[last_name]"
+                      name="last_name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      length="50"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[email]"
+                      name="email"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[phone_number]"
+                      length="50"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[phone_number]"
+                      name="phone_number"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hire_date]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[hire_date]"
+                      name="hire_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[job_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[job_id]"
+                      name="job_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[salary]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[salary]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[salary]"
+                      name="salary"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[manager_id]"
+                      name="manager_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[department_id]"
+                      name="department_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[exp]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[exp]"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].Columns[exp]"
+                      name="exp"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[employee_id]"
+                      dataType="i4"
+                      name="employee_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[first_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="first_name" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[last_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[email]"
+                      dataType="wstr"
+                      length="50"
+                      name="email" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[phone_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="phone_number" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[hire_date]"
+                      dataType="i4"
+                      name="hire_date" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[job_id]"
+                      dataType="i4"
+                      name="job_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[salary]"
+                      dataType="i4"
+                      name="salary" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[manager_id]"
+                      dataType="i4"
+                      name="manager_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[department_id]"
+                      dataType="i4"
+                      name="department_id" />
+                    <externalMetadataColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[exp]"
+                      dataType="i4"
+                      name="exp" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\change the data type without derived column.Paths[Flat File Source Output]"
+              endId="Package\change the data type without derived column\emp_without_derived_column.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\change the data type without derived column\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="297,42"
+          Id="Package\change the data type without derived column"
+          TopLeft="194.5,75.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\change the data type without derived column">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\change the data type without derived column\Flat File Source"
+          TopLeft="109.5,0.5" />
+        <NodeLayout
+          Size="225,42"
+          Id="Package\change the data type without derived column\emp_without_derived_column"
+          TopLeft="59.5,148.5" />
+        <EdgeLayout
+          Id="Package\change the data type without derived column.Paths[Flat File Source Output]"
+          TopLeft="187.5,42.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.5,106"
+              Start="0,0"
+              End="-15.5,98.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49"
+                    Point2="0,53"
+                    Point3="-4,53" />
+                  <mssgle:LineSegment
+                    End="-11.5,53" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.5,53"
+                    Point2="-15.5,53"
+                    Point3="-15.5,57" />
+                  <mssgle:LineSegment
+                    End="-15.5,98.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\change the data type without derived column\emp_without_derived_column">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
